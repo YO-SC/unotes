@@ -1,0 +1,55 @@
+<% include partials/header %> 
+<% include partials/navbar %> 
+
+    <!-- Main (user notes) -->
+    <main id="indexMain">
+      <section id="sectionContent">
+        <div id="pageTitle" class="container">
+          <h1 id="indexH1" class="display-3">Your Notes</h1>
+
+          <hr id="lineBreakPageTitle" />
+        </div>
+
+        <div id="pageContent" class="container">
+          <!-- New note button: -->
+          <a href="/notes/new" class="btnCreateNote btn btn-lg btn-outline-primary">
+            New Note
+          </a>
+
+          <!-- User notes: -->
+          <% if(currentUser) { %> 
+            <% notes.forEach((note) => { %>
+                <div class="card bg-dark border-primary">
+                  <div class="card-body">
+                    <div class="card-title">
+                      <h5><%= note.title %></h5>
+                    </div>
+
+                    <hr id="lineBreakNoteTitle" />
+
+                    <p class="card-text">
+                      <%= note.content %>
+                    </p>
+
+                    <div class="noteButtons">
+                    <!--TODO change notId for the actual id-->
+                      <a href="/notes/<%= note._id %>/edit" class="btn btn-outline-warning">Edit</a>
+
+                      <form id="formNoteDeleteButton" action="/notes/<%= note._id %>?_method=DELETE" method="POST">
+                          <button type="submit" class="btn btn-outline-danger ml-2">Delete</button>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="card-footer text-muted text-right">
+                     <%= note.dateCreated.toDateString() %> 
+                  </div>
+                </div>
+              <% }); %>
+          <% } %>
+
+        </div>
+      </section>
+    </main>
+
+<% include partials/footer %> 

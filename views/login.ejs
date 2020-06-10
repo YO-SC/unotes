@@ -1,0 +1,69 @@
+<% include partials/header %> 
+
+<!-- Cover -->
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <div class="container">
+        <main role="main" class="inner cover">
+          <h1 class="cover-heading display-1">uNotes</h1>
+          <p class="lead">{ The place where you keep your notes! }</p>
+
+          <h1 class="cover-heading display-4">Login</h1>
+          <hr id="lineBreakPageTitle" />
+
+          <!-- Form -->
+          <div class="container">
+            <form action="/login" method="POST">
+              <div class="form-group">
+                <div class="row">
+                  <input
+                    type="text"
+                    class="form-control-lg col-sm-12"
+                    id="usernameInput"
+                    placeholder="Username"
+                    name="username"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                  <input
+                    type="password"
+                    class="form-control-lg col-sm-12"
+                    id="passwordInput"
+                    placeholder="Password"
+                    name="password"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                    <div class="formMainButtons col- col-sm-4">
+                        <p>
+                            <a
+                                href="/"
+                                class="mainButtons btn btn-lg btn-outline-danger"
+                            >
+                                Cancel
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4"></div>
+
+                    <div class="formMainButtons col- col-sm-4">
+                      <button
+                          type="submit"
+                          class="mainButtons btn btn-lg btn-outline-success"
+                      >
+                          Login
+                      </button>
+                    </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+<% include partials/footer %> 

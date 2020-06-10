@@ -1,0 +1,78 @@
+<% include partials/header %> 
+<% include partials/navbar %> 
+
+<!-- Cover -->
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <div class="container">
+        <main role="main" class="inner cover">
+          <!-- <h1 class="cover-heading display-1">uNotes</h1>
+          <p class="lead">{ The place where you keep your notes! }</p> -->
+
+          <h1 class="cover-heading display-2">New Note</h1>
+          <hr id="lineBreakPageTitle" />
+
+          <!-- Form -->
+          <div class="container">
+            <form action="/notes" method="POST">
+              <div class="form-group">
+                <div class="row">
+                  <input
+                    type="text"
+                    class="form-control-lg col-sm-12"
+                    id="noteTitle"
+                    placeholder="Note Title"
+                    name="title"
+                    required
+                  />
+                </div>
+                <div class="row">
+                  <!-- <input
+                    type="text"
+                    class="form-control-lg col-sm-12"
+                    id="noteContent"
+                    placeholder="Note Content"
+                    name="noteContent"
+                    required
+                  /> -->
+                  <textarea
+                    class="form-control"
+                    rows="10"
+                    class="form-control-lg col-sm-12"
+                    id="noteContent"
+                    placeholder="Note Content"
+                    name="content"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="row">
+                  <div class="formMainButtons col- col-sm-4">
+                        <p>
+                            <a
+                                href="/notes"
+                                class="mainButtons btn btn-lg btn-outline-danger"
+                            >
+                                Cancel
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4"></div>
+
+                    <div class="formMainButtons col- col-sm-4">
+                        <button
+                            type="submit"
+                            class="mainButtons btn btn-lg btn-outline-success"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+<% include partials/footer %> 

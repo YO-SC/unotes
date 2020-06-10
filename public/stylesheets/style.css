@@ -1,0 +1,132 @@
+/* !All Pages Common Attributes */
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+#indexBody {
+  padding-top: 2rem;
+}
+
+#indexMain {
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+/*
+   * Cover
+   */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+}
+
+.cover h1 {
+  text-align: center;
+}
+
+.cover p:nth-of-type(1) {
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+/* Custom default button */
+.mainButtons,
+.mainButtons:hover,
+.mainButtons:focus {
+  /* color: white;  */
+  text-shadow: none; /* Prevent inheritance from `body` */
+  width: 100%;
+}
+
+#lineBreakPageTitle {
+  /* Simple style */
+  /* border-top: 2px solid rgb(134, 134, 134); */
+
+  /* Stylish style  */
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #333, #ccc, #333);
+}
+
+/* Form */
+form input,
+form textarea,
+form button,
+form a {
+  margin: 0.6rem 0;
+}
+
+.formMainButtons {
+  margin: 0 0;
+  padding: 0 0;
+}
+/* !LANDING Specific */
+#landingBody {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+/* !INDEX Specific */
+#indexH1 {
+  text-align: center;
+  color: white;
+}
+
+.navbarBg {
+  background-color: #404040;
+}
+
+#pageContent {
+  max-width: 720px;
+}
+
+.btnCreateNote {
+  width: 100%;
+}
+
+.card {
+  margin: 1.5rem 0;
+}
+
+.card-title {
+  font-weight: 800;
+}
+
+#lineBreakNoteTitle {
+  border-top: 1px solid #8c8b8b;
+}
+
+.noteButtons {
+  text-align: right;
+}
+
+.noteButtons:hover,
+.noteButtons:focus {
+  color: white;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+#formNoteDeleteButton {
+  display: inline;
+}
